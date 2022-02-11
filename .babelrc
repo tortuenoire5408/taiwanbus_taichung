@@ -1,0 +1,19 @@
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "plugins": [
+        "@loadable/babel-plugin",
+        [
+            "babel-plugin-transform-imports",
+            {
+                "@material-ui/core": {
+                    "transform": "@mui/material/${member}",
+                    "preventFullImport": true
+                },
+                "@material-ui/icons": {
+                    "transform": "@mui/icons-material/${member}",
+                    "preventFullImport": true
+                }
+            }
+        ]
+    ]
+}
